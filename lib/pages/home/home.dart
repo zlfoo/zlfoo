@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
         leading: IconButton(icon: Icon(Icons.search), onPressed: () {}),
       ),
       endDrawer: CustomDrawer(),
-      body: Column(
+      body: ListView(
         children: <Widget>[
           SizedBox(
               height: 190,
@@ -43,12 +43,32 @@ class _HomeState extends State<Home> {
                 dotIncreaseSize: 2,
                 dotSpacing: 20,
                 dotColor: Colors.white,
-                dotBgColor: Colors.blue.withOpacity(0.5),
+                dotBgColor: Colors.black.withOpacity(0.5),
                 boxFit: BoxFit.cover,
-                overlayShadow: true,
-                overlayShadowColors: Colors.blue,
-                overlayShadowSize: 0.2,
-              ))
+              ),
+             ),
+             Container(height:200 ,child: ListView(
+               scrollDirection: Axis.horizontal,
+               children:<Widget>[
+                 Container(
+                   height: 120,
+                   width:105,
+                   child: ListTile(
+                   title: Image.asset("images/Appe logo.png"),
+                 )),
+                 Container(
+                   height: 150,
+                   width:100,
+                   child: ListTile(
+                   title: Image.asset("images/mis logo.jpg"),
+                 )),
+                 Container(
+                   height: 150,
+                   width:145,
+                   child: ListTile(
+                   title: Image.asset("images/Lg logo.jpg"),
+                   ))
+             ],))
         ],
       ),
     );
