@@ -39,10 +39,18 @@ class _HomeState extends State<Home> {
                     'images/slider2.webp',
                   ),
                 ],
+                dotSize: 8,
+                dotIncreaseSize: 2,
+                dotSpacing: 20,
+                dotColor: Colors.white,
+                dotBgColor: Colors.blue.withOpacity(0.5),
+                boxFit: BoxFit.cover,
+                overlayShadow: true,
+                overlayShadowColors: Colors.blue,
+                overlayShadowSize: 0.2,
               ))
         ],
       ),
     );
   }
 }
-
