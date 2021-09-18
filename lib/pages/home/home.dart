@@ -51,23 +51,29 @@ class _HomeState extends State<Home> {
                scrollDirection: Axis.horizontal,
                children:<Widget>[
                  Container(
-                   height: 120,
-                   width:105,
+                   height: 90,
+                   width:90,
                    child: ListTile(
                    title: Image.asset("images/Appe logo.png"),
                  )),
                  Container(
-                   height: 150,
-                   width:100,
+                   height: 90,
+                   width:90,
                    child: ListTile(
                    title: Image.asset("images/mis logo.jpg"),
                  )),
                  Container(
-                   height: 150,
-                   width:145,
+                   height: 90,
+                   width:120,
                    child: ListTile(
                    title: Image.asset("images/Lg logo.jpg"),
-                   ))
+                   )),
+                   Container(
+                   height: 90,
+                   width:100,
+                   child: ListTile(
+                   title: Image.asset("images/samaung logo.png"),
+                   )),
              ],))
         ],
       ),
