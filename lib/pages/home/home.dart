@@ -30,13 +30,13 @@ class _HomeState extends State<Home> {
               child: Carousel(
                 images: [
                   AssetImage(
-                    'images/slider1.jpg',
+                    'images/Apple product.png',
                   ),
                   AssetImage(
                     'images/slider3.jpg',
                   ),
                   AssetImage(
-                    'images/slider2.webp',
+                    'images/Apple product.png2.jpg',
                   ),
                 ],
                 dotSize: 8,
@@ -47,7 +47,8 @@ class _HomeState extends State<Home> {
                 boxFit: BoxFit.cover,
               ),
              ),
-             Container(height:200 ,child: ListView(
+             Container( padding: EdgeInsets.all(10) , child: Text("Categories" , style: TextStyle(fontSize: 30, color: Colors.blue),),),
+             Container(height:120 ,child: ListView(
                scrollDirection: Axis.horizontal,
                children:<Widget>[
                  Container(
@@ -55,26 +56,20 @@ class _HomeState extends State<Home> {
                    width:90,
                    child: ListTile(
                    title: Image.asset("images/Appe logo.png"),
+                   subtitle: Container(child: Text("Apple" , style: TextStyle(fontSize: 22),),),
                  )),
-                 Container(
-                   height: 90,
-                   width:90,
-                   child: ListTile(
-                   title: Image.asset("images/mis logo.jpg"),
-                 )),
-                 Container(
-                   height: 90,
-                   width:120,
-                   child: ListTile(
-                   title: Image.asset("images/Lg logo.jpg"),
-                   )),
-                   Container(
-                   height: 90,
-                   width:100,
-                   child: ListTile(
-                   title: Image.asset("images/samaung logo.png"),
-                   )),
-             ],))
+             ],)),
+               Container( padding: EdgeInsets.all(7) , child: Text("Last product" , style: TextStyle(fontSize: 20, color: Colors.blue),),),
+               Container(height: 400
+                 ,child: GridView(
+                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+                 children: <Widget>[
+                   GridTile(child:Image.asset("images/Appe logo.png7.png"),footer: Container(color: Colors.blue [50],child: Text("Iphone12 pro max", textAlign: TextAlign.center, style: TextStyle(fontSize: 18,),),),),
+                   GridTile(child:Image.asset("images/Apple product.png3.jpg"),footer: Container(color: Colors.blue [50],child: Text("Iphone13 pro max", textAlign: TextAlign.center, style: TextStyle(fontSize: 18,),),),),
+                   GridTile(child:Image.asset("images/Appe logo.png5.jpg"),footer: Container(color: Colors.blue [50],child: Text("Iphone13 pro max", textAlign: TextAlign.center, style: TextStyle(fontSize: 18,),),),),
+                   GridTile(child:Image.asset("images/Appe logo.png4.jpg"),footer: Container(color: Colors.blue [50],child: Text("Iphone13 pro max", textAlign: TextAlign.center, style: TextStyle(fontSize: 18,),),),),
+                   ],
+               ) ,)
         ],
       ),
     );
